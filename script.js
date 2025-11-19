@@ -63,3 +63,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     }
   });
 })();
+
+const playBtn = document.getElementById("play-music");
+const music = document.getElementById("bg-music");
+
+playBtn.addEventListener("click", () => {
+  music.play();
+  playBtn.innerText = "🎵 Tocando...";
+  playBtn.disabled = true;
+});
