@@ -178,7 +178,7 @@ main {
   transform: rotate(18deg);
 }
 
-.hello-kitty-bow::marker;
+.hello-kitty-bow::marker,
 .hello-kitty-bow::marker {
   content: none;
 }
