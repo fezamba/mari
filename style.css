@@ -1,0 +1,372 @@
+:root {
+  --pink-bg: #ffeef7;
+  --pink-main: #ff9acb;
+  --pink-strong: #ff5ca8;
+  --pink-soft: #ffd4eb;
+  --text-main: #333333;
+  --white: #ffffff;
+  --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: var(--pink-bg);
+  color: var(--text-main);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.2rem 3rem;
+}
+
+.section {
+  margin-top: 2.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  color: var(--pink-strong);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 1.6rem;
+}
+
+.hero {
+  background: radial-gradient(circle at top, #ffc8e8, #ff9acb, #ff7fb9);
+  color: #000;
+  padding: 2.8rem 1.4rem 2.2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "♡";
+  position: absolute;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero::before {
+  top: 0.4rem;
+  left: 0.7rem;
+}
+
+.hero::after {
+  bottom: 0.2rem;
+  right: 0.8rem;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+}
+
+.hero-buttons {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--pink-strong);
+  border-color: var(--white);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.hello-kitty-bow {
+  width: 80px;
+  height: 50px;
+  border-radius: 50px;
+  background: var(--pink-soft);
+  box-shadow: 0 0 0 4px var(--white), 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 0.9rem;
+  position: relative;
+}
+
+.hello-kitty-bow::before,
+.hello-kitty-bow::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 42px;
+  border-radius: 60% 40% 60% 40%;
+  background: var(--pink-main);
+  top: 4px;
+}
+
+.hello-kitty-bow::before {
+  left: -25px;
+  transform: rotate(-18deg);
+}
+
+.hello-kitty-bow::after {
+  right: -25px;
+  transform: rotate(18deg);
+}
+
+.hello-kitty-bow::marker;
+.hello-kitty-bow::marker {
+  content: none;
+}
+
+.hello-kitty-bow::marker,
+.hello-kitty-bow span {
+  display: none;
+}
+
+.hello-kitty-bow::marker,
+.hello-kitty-bow + span {
+  display: none;
+}
+
+.hello-kitty-bow::selection {
+  background: transparent;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 1.4rem 1rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.carta-card {
+  border: 2px solid var(--pink-soft);
+}
+
+.carta-card p {
+  margin: 0 0 0.9rem;
+  line-height: 1.45;
+  font-size: 0.96rem;
+}
+
+.carta-card .assinatura {
+  font-weight: 700;
+  text-align: right;
+}
+
+.kitty-footer {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #999;
+}
+
+.galeria {
+  margin-top: 3rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid var(--pink-soft);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #f8f8f8;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.photo-modal.is-open {
+  display: flex;
+}
+
+.photo-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.photo-modal-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  padding: 0.8rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.photo-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: var(--pink-main);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proximo-passo {
+  margin-top: 3rem;
+}
+
+.proximo-card {
+  background: linear-gradient(135deg, #ffffff, #ffe6f5);
+  border: 2px solid var(--pink-soft);
+}
+
+.proximo-card p {
+  margin: 0 0 0.9rem;
+  line-height: 1.45;
+}
+
+.proximo-card .assinatura {
+  text-align: right;
+  font-weight: 700;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  padding: 1.5rem 0 2rem;
+}
+
+@media (min-width: 600px) {
+  .hero {
+    padding: 3rem 1.5rem 2.6rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-grid img {
+    height: 190px;
+  }
+}
